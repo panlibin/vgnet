@@ -4,7 +4,6 @@ import (
 	"errors"
 	"net"
 	"sync"
-	"sync/atomic"
 
 	logger "github.com/panlibin/vglog"
 	network "github.com/panlibin/vgnet"
