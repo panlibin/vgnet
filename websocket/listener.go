@@ -29,7 +29,7 @@ func (wsh *wsHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 	conn.SetReadLimit(100000)
 	wsConn := newConnection(conn)
-	go wsh.newConnCallback(wsConn)
+	wsh.newConnCallback(wsConn)
 
 	wsConn.run()
 }

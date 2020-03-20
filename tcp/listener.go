@@ -66,7 +66,7 @@ func (l *Listener) accept() {
 
 func (l *Listener) newConnection(conn net.Conn) {
 	tcpConn := newConnection(conn)
-	go l.NewConnCallback(tcpConn)
+	l.NewConnCallback(tcpConn)
 
 	tcpConn.run()
 }

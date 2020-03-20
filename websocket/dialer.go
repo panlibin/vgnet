@@ -28,7 +28,7 @@ func (d *dialer) Dial(addr string, cb func(network.Connection, error)) {
 			return
 		}
 		wsConn := newConnection(conn)
-		go cb(wsConn, nil)
+		cb(wsConn, nil)
 		wsConn.run()
 	}()
 }

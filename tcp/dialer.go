@@ -24,7 +24,7 @@ func (d *dialer) Dial(addr string, cb func(network.Connection, error)) {
 			return
 		}
 		tcpConn := newConnection(conn)
-		go cb(tcpConn, nil)
+		cb(tcpConn, nil)
 
 		tcpConn.run()
 	}()
