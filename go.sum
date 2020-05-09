@@ -6,3 +6,5 @@ github.com/panlibin/vglog v0.0.0-20200317084509-89ab82f206ad h1:KskdRANNHTaiXnKq
 github.com/panlibin/vglog v0.0.0-20200317084509-89ab82f206ad/go.mod h1:aEAG2vUCahNPexsaQn80+KmMEeFL+vJvC3VOtIwsmRU=
 github.com/panlibin/vglog v0.0.0-20200509072752-ba9acb6a27d5 h1:9WpZvDRsx3gZ+2EeuJP2YMptlJAWVKZH4qUwPDVMs7g=
 github.com/panlibin/vglog v0.0.0-20200509072752-ba9acb6a27d5/go.mod h1:aEAG2vUCahNPexsaQn80+KmMEeFL+vJvC3VOtIwsmRU=
+github.com/panlibin/vglog v0.0.0-20200509085241-49e2d3e35a2f h1:WJP2sllCpyIyXfSLfrC1s4RRQUwBfujINnYkeqJBCwA=
+github.com/panlibin/vglog v0.0.0-20200509085241-49e2d3e35a2f/go.mod h1:aEAG2vUCahNPexsaQn80+KmMEeFL+vJvC3VOtIwsmRU=
