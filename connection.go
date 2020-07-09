@@ -6,7 +6,7 @@ import (
 
 // Connection socket
 type Connection interface {
-	Accept(Agent)
+	Accept(Agent, int)
 	Write(interface{}) error
 	LocalAddr() net.Addr
 	RemoteAddr() net.Addr

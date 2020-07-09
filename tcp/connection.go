@@ -9,8 +9,6 @@ import (
 	network "github.com/panlibin/vgnet"
 )
 
-const _DefaultWriteChannelSize = 64
-
 const (
 	statusInit int32 = iota
 	statusRunning
@@ -37,7 +35,7 @@ func newConnection(conn net.Conn) *connection {
 }
 
 // Accept 接受连接,设置agent
-func (c *connection) Accept(agent network.Agent) {
+func (c *connection) Accept(agent network.Agent, writeChanSize int) {
 	c.mtx.Lock()
 	if c.status != statusInit {
 		c.mtx.Unlock()
@@ -47,7 +45,7 @@ func (c *connection) Accept(agent network.Agent) {
 		c.status = statusWaitForClose
 	} else {
 		c.agent = agent
-		c.writeChan = make(chan interface{}, _DefaultWriteChannelSize)
+		c.writeChan = make(chan interface{}, writeChanSize)
 		c.status = statusRunning
 	}
 	c.mtx.Unlock()
