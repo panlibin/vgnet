@@ -48,7 +48,6 @@ func (l *Listener) accept() {
 
 		if atomic.LoadInt32(&l.closed) != 0 {
 			if conn != nil {
-				conn.(*net.TCPConn).SetLinger(0)
 				conn.Close()
 			}
 			break

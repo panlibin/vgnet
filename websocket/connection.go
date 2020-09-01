@@ -122,7 +122,6 @@ func (c *connection) doClose() {
 		close(c.writeChan)
 	}
 
-	c.conn.UnderlyingConn().(*net.TCPConn).SetLinger(0)
 	c.conn.Close()
 
 	agent := c.agent
@@ -168,7 +167,6 @@ func (c *connection) writeLoop() {
 	}
 
 	c.Close(err)
-	c.conn.UnderlyingConn().(*net.TCPConn).SetLinger(0)
 	c.conn.Close()
 	c.wg.Done()
 }
